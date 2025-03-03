@@ -1,0 +1,188 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #eae2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* To-Do List Main Container */
+#todo-container {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+  width: 850px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Layout for Left & Right Container */
+.todo-wrapper {
+  display: flex;
+  gap: 20px; /* Space between containers */
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Left Container: Input field + Add button */
+.left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  height: 550px;
+  background-color: #cdb4db;
+}
+
+/* Input field */
+#task-input {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #d1c4e9;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#task-input::placeholder {
+  color: #666;
+}
+
+#task-input:focus {
+  border-color: #a084e8;
+  background-color: #fff;
+}
+
+/* Add Task Button */
+#add-task {
+  background-color: #00000080;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+#add-task:hover {
+  background-color: #00000080;
+}
+#add-task:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Right Container: Task List */
+.right-container {
+  flex: 2;
+  background: #eae2f8;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  height: 550px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cdb4db #f4f4f4;
+  will-change: transform;
+}
+.right-container h3 {
+  line-height: 0;
+}
+/* Task List */
+#task-list ul {
+  display: flex;
+  flex-direction: column-reverse; /* New tasks on top */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Task Item */
+li {
+  background: #cdb4db;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Task Content */
+li .task-content {
+  width: 60%;
+  flex-grow: 1;
+  margin-right: 10px;
+  word-wrap: break-word;
+}
+
+li .task-content:focus-visible {
+  border: none;
+  outline: none;
+}
+
+/* Completed Task */
+.completed {
+  text-decoration: line-through;
+  color: #6d6875;
+  background: #d4e09b;
+}
+
+/* Buttons inside task items */
+.edit-btn,
+.delete-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+}
+
+.edit-btn {
+  background-color: #229f2291;
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background-color: #229f2291;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 8px;
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+}
+
+/* Custom Scrollbar for Chrome/Edge */
+.right-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-container::-webkit-scrollbar-thumb {
+  background-color: #a084e8;
+  border-radius: 10px;
+}
+
+.right-container::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}

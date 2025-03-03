@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="todo-container">
+        <h2>My To-Do List ✨</h2>
+
+        <!-- Main wrapper for left and right containers -->
+        <div class="todo-wrapper">
+            <!-- Left Container: Input & Add Task Button -->
+            <div class="left-container">
+                <textarea type="text" id="task-input" placeholder="Add a new task..." ></textarea>
+                <button id="add-task">Add Task</button>
+            </div>
+
+            <!-- Right Container: Task List -->
+            <div class="right-container">
+                <h3>Tasks 📋</h3>
+                <div id="task-list">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/todolist.js"></script> 
+</body>
+</html>
