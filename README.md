@@ -1,4 +1,4 @@
-✅ To-Do List Web App
+```✅ To-Do List Web App
 
 A simple To-Do List web application that allows users to add, edit, delete, and manage tasks effortlessly. Tasks are stored using localStorage, ensuring they persist even after refreshing the page.
 
@@ -40,3 +40,4 @@ to-do-list-web-app/
 📌 GitHub: @urbashijrall
 
 🌟 Like this project? Give it a star ⭐ on GitHub!
+```
